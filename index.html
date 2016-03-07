@@ -1,0 +1,336 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="css/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+        <link href="css/main.css" type="text/css" rel="stylesheet"/>
+        <script src="vendor/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    
+    <body ng-app="myApp" ng-controller="MainController">
+        <nav class="nav1"> 
+            <div class="container1">
+               <div class="nav2">
+                <ul>
+                    <li><img src="http://www.referenceforbusiness.com/photos/limited-liability-company-747.jpg"/></li>
+                    <li><div class='glyphicon glyphicon-user'></div><a class="Sign_hid" href="#">Sign In</a></li>
+                    <li><a href="#" >News</a></li>
+                    <li><a href="#" >Sport</a></li>
+                    <li><a href="#" class="">Weather</a></li>
+                    <li id="hidlist1"><a href="#" >Shop</a></li>
+                    <li id="hidlist2"><a href="#" >Earth</a></li>
+                    <li id="hidlist3"><a href="#" >Travel</a></li>
+                    <li id="more"><a href="#">More<span class="glyphicon glyphicon-triangle-bottom"></span></a></li> 
+                    <li class="search"><input type='text' /><span class="glyphicon glyphicon-search search"></span></li>
+                </ul> 
+               </div>
+                <div id="hiddenElement" class="hiddenNav dropDown ">
+                    <h1>More</h1>
+                    <ul>
+                        <li><a href="#">News</a></li>
+				        <li><a href="#">Sport</a></li>
+				        <li><a href="#">Weather</a></li>
+				        <li><a  class="hidlist1" href="#">Shop</a></li>
+				        <li><a  class="hidlist2" href="#">Earth</a></li>
+				        <li><a  class="hidlist3" href="#">Travel</a></li>
+                        <li>Capital</li>
+						<li>Culture</li>
+						<li>Autos</li>
+						<li>Future</li>
+						<li>TV</li>
+						<li>Radio</li>
+						<li>CBBC</li>
+						<li>CBeebies</li>
+						<li>Food</li>
+						<li>iWonder</li>
+						<li>Bitesize</li>
+						<li>Music</li>
+						<li>Arts</li>
+						<li>Make It Digital</li>
+						<li>Taster</li>
+						<li>Nature</li>
+						<li>Local</li>
+                    </ul>
+                </div> 
+                
+            </div>
+        </nav>
+        
+        <nav class="head">
+           <div class="container1">
+                <h1>NEWS</h1>
+            </div>
+        </nav>
+        <nav class="nav3">
+               <div class="container1">
+                <ul>
+                        <li>Home</li>
+                        <li>Video</li>
+                        <li>World</li>
+                        <li>US & Canada</li>
+                        <li>UK</li>
+                        <li>Business</li>
+                        <li>Tech</li>
+                        <li>Science</li>
+                        <li>Magazine</li>
+                        <li>Entertainment & Art</li>
+                        <li>Health</li>
+                        <li>More <span class="glyphicon glyphicon-triangle-bottom"></span></li>
+                    </ul>
+                </div>
+             </nav> 
+        
+        <div class="content">
+            <div class="container1">
+                <div class="leftcontent">
+                    <div class="leftNews1">
+                        <h1>{{news.title}}</h1>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                <p>
+                                    {{news.content}}
+                                </p>
+                                <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <img ng-src="{{news.src}}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leftNews2">
+                        <div class="row">
+                            <div class="col-md-4 col-xs-4 box1">
+                                <img ng-src='{{leftNews2[0].src}}'/>
+                                <h1>{{leftNews2[0].title}}</h1>
+                                <p>{{leftNews2[0].content}}</p>
+                                <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-4 box2">
+                                <img ng-src='{{leftNews2[1].src}}'/>
+                                <h1>{{leftNews2[1].title}}</h1>
+                                <p>{{leftNews2[1].content}}</p>
+                                <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-3 pull-right box3">
+                                <div class="row">
+                                    <h1 style=" margin-top:-1px">Brazilian finance minister replaced</h1>
+                                    <div class="Timebox">
+                                        <p style="display:block; margin-bottom:-2px;"><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                        <a href="#">Business</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1>Ukraine halts Russia debt repayments</h1>
+                                    <div class="Timebox">
+                                        <p style="display:block; margin-bottom:-2px;"><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                        <a href="#">Business</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1>'Pathway' found for EU deal - Canmeron</h1>
+                                    <div class="Timebox">
+                                        <p style="display:block; margin-bottom:-2px;"><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                        <a href="#">Business</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="leftNews3">
+                        <div class="row box" ng-repeat="news3 in leftNews3">
+                            <div class="col-md-6 col-xs-6">
+                                <h1>{{news3.title1}}</h1>
+                                <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <h1>{{news3.title2}}</h1>
+                                <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leftNews4">
+                        <h1 style="font-size:20px; margin-left:20px;">Watch/Listen</h1>
+                            <div class="col-md-6 col-xs-6" ng-repeat="watch in watchandListenData">
+                                <div class="row box">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img ng-src="{{watch.src}}" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 rightbox">
+                                        <h1>{{watch.title}}</h1>
+                                        <p style="display:block; margin-bottom:-2px;"><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                        <a href="#">{{watch.type}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="leftNews5">
+                        <h1>The Papers</h1>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                <img ng-src="{{leftNews5.src}}"/>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <h3 style="margin-top:-10px;">{{leftNews5.title}}</h3>
+                                <p>{{leftNews5.content}}</p>
+                                <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leftNews6">
+                        <h3>Feature & Analysis 2</h3>
+                        <div class="row">
+                        <div class='col-md-4 col-xs-4' ng-repeat="news in leftNews6">
+                            <img src="{{news.src}}" />
+                            <h4>{{news.title}}</h4>
+                            <p>{{news.content}}</p>
+                            <div class="Timebox">
+                                    <p><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                    <a href="#">Business</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="leftNews7">
+                       <h3>More from the UK <span style="color:#BB1919">></span></h3>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3" ng-repeat="news in leftNews7">
+                                <img ng-src="{{news.src}}"/>
+                                <h4 style="color:#BB1919">{{news.title}}</h4>
+                                <p style="font-weight:bold">{{news.content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightcontent">
+                    <div class="rightNews1">
+                        <h1>Watch/Listen</h1>
+                        <div>
+                            <div class="box" ng-repeat="watch in watchandListenData">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6 leftbox">
+                                        <img ng-src="{{watch.src}}"/>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 rightbox">
+                                        <h1>{{watch.title}} </h1>
+                                        <p style="display:block; margin-bottom:-2px;"><span class="glyphicon glyphicon-time"></span>{{diffHrs}} hours ago</p>
+                                        <a href="#">{{watch.type}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightNews2">
+                        <h3>Share with BBCC News<span style="color:red;">></span>  </h3>
+                        <p><span class="glyphicon glyphicon-phone"></span>  Send us an SMS or MMS to +44 7624 800100 </p>
+                        <p><span class="glyphicon glyphicon-envelope"></span>  Email us at haveyoursay@bbc.co.uk</p>
+                        <p><span class="glyphicon glyphicon-plane"></span> Follow Have Your Say on Twitter</p>
+                    </div>
+                    <div class="rightNews3">
+                        <div class="banner">
+                            <h3>Most Popular</h3>
+                            <p>From UK</p>
+                        </div>
+                        <ul>
+                            <li ng-repeat="news in rightNews3">
+                                <div class="row">
+                                    <div class="col-md-6 left">{{news.day}}</div>
+                                    <div class="col-md-6 right">{{news.content}}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightNews4">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <div class="more">
+            <div class="container1">
+                <h3>More from BBC News</h3>
+                <div class="moreBox" ng-repeat="more in morebox">
+                    <img ng-src="{{more.src_img}}"/>
+                    <a href="{{more.link}}"><h5>{{more.title}}</h5></a>
+                    <div class="para"><p>{{more.brief_msg}}</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer1">
+            <div class="container">
+                <h2>BBC News Services</h2>
+                <div class="row">
+                    <div class="col-md-3 col-xs-3"><p><span class="glyphicon glyphicon-earphone"></span> On your mobile</p></div>
+                    <div class="col-md-3 col-xs-3"><p><span class="glyphicon glyphicon-facetime-video"></span> On your connected tv</p></div>
+                    <div class="col-md-3 col-xs-3"><p><span class="glyphicon glyphicon-alert"></span> Get news alerts</p></div>
+                    <div class="col-md-3 col-xs-3"><p><span class="glyphicon glyphicon-envelope"></span> Contact BBC News</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container1">
+                <h2 style="padding:10px;">Explore the BBC</h2>
+                <div >
+                    <ul class="list">
+                        <li>News</li>
+                        <li>Sport</li>
+                        <li>Weather</li>
+                        <li>Shop</li>
+                        <li>Earth</li>
+                        <li>Travel</li>
+                        <li>Capital</li>
+                        <li>Culture</li>
+                        <li>Autos</li>
+                        <li>Future</li>
+                        <li>TV</li>
+                        <li>Radio</li>
+                        <li>CBBC</li>
+                        <li>CBeebies</li>
+                        <li>Food</li>
+                        <li>Make It Digital</li>
+                        <li>iWonder</li>
+                        <li>Bitesize</li>
+                        <li>Music</li>
+                        <li>Nature</li>
+                        <li>Local</li>
+                    </ul>
+                </div>
+                <ul class="list2">
+                    <li>Term of Use</li>
+                    <li>About the BBC</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookies</li>
+                    <li>Accessibility Help</li>
+                    <li>Parental Guidance</li>
+                    <li>Contact the BBC</li>
+                    <li>Advertise with us</li>
+                    <li>Ad choices</li>
+                </ul>
+                <div>Copyright &copy; 2015 BBC.The BBC is not responsible for the content of external sites. Read about our approach to external linking. </div>
+            </div>
+        </div>
+        <!--module -->
+        <script src="js/app.js"></script>
+        <!--controller -->
+        <script src="js/controllers/MainController.js"></script>
+        <!--Services -->
+        <script src="js/services/service.js"></script>
+    </body>
+</html>
